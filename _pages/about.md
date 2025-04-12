@@ -1,20 +1,23 @@
 ---
 layout: about
 title: about
+page_title: About me
 permalink: /
 subtitle: # <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: zeyuan_wustl_small.png
   image_circular: false # crops the image to make it circular
-  image_width: 150px
+  image_width: 200px 
   more_info: >
     <p>Zeyuan Ye</p>
     <p>PhD student @ WashU Physics</p>
     <p>Email: y.zeyuan(at)wustl.edu</p>
     <p>
-      <a href="https://scholar.google.com/citations?user=qnYcPGoAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener noreferrer"><i class="ai ai-google-scholar"></i> Google Scholar</a> |
+      <a href="https://scholar.google.com/citations?user=qnYcPGoAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener noreferrer"><i class="ai ai-google-scholar"></i> Google Scholar</a>
+    </p>
+    <p>
       <a href="https://github.com/ageyy" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
     </p>
 
