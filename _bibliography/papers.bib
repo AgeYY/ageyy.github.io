@@ -3,6 +3,8 @@
 
 @string{aps = {American Physical Society,}}
 
+@Comment{
+
 @book{einstein1920relativity,
   title={Relativity: the Special and General Theory},
   author={Einstein, Albert},
@@ -111,5 +113,61 @@
   year={1967},
   publisher={Vision},
   preview={wave-mechanics.gif},
-  abbr={Vision}
+  abbr={Vision},
+  selected={true}
+}
+}
+
+
+@article{YE2025112199,
+title = {Brain-like border ownership signals support prediction of natural videos},
+journal = {iScience},
+volume = {28},
+number = {4},
+pages = {112199},
+year = {2025},
+issn = {2589-0042},
+doi = {https://doi.org/10.1016/j.isci.2025.112199},
+url = {https://www.sciencedirect.com/science/article/pii/S2589004225004602},
+author = {Zeyuan Ye and Ralf Wessel and Tom P. Franken},
+keywords = {Neuroscience, Behavioral neuroscience, Social sciences},
+abstract = {Summary
+To make sense of visual scenes, the brain must segment foreground from background. This is thought to be facilitated by neurons that signal border ownership (BOS), which indicate which side of a border in their receptive field is owned by an object. How these signals emerge without a teaching signal of what is foreground remains unclear. Here we find that many units in PredNet, a self-supervised deep neural network trained to predict future frames in natural videos, are selective for BOS. They share key properties with BOS neurons in the brain, including robustness to object transformations and hysteresis. Ablation revealed that BOS units contribute more to prediction than other units for videos with moving objects. Our findings suggest that BOS neurons might emerge due to an evolutionary or developmental pressure to predict future input in natural, complex dynamic environments, even without an explicit requirement to segment foreground from background.},
+selected={true},
+bibtex_show={true},
+preview={prednet_bos.png}
+}
+
+@article {Ye2024.09.18.613797,
+	author = {Ye, Zeyuan and Wessel, Ralf},
+	title = {Speed modulations in grid cell information geometry},
+	elocation-id = {2024.09.18.613797},
+	year = {2024},
+	doi = {10.1101/2024.09.18.613797},
+	publisher = {Cold Spring Harbor Laboratory},
+	abstract = {Grid cells, known for their hexagonal spatial firing patterns, are widely regarded as essential to the brain{\textquoteright}s internal representation of the external space. Maintaining an accurate internal spatial representation is challenging when an animal is running at high speeds, as its self-location constantly changes. Previous studies of speed modulation of grid cells focused on individual or pairs of grid cells, yet neurons represent information via collective population activity. Population noise covariance can have significant impact on information coding that is impossible to infer from individual neuron analysis. To address this issue, we developed a novel Gaussian Process with Kernel Regression (GKR) method that allows study the simultaneously recorded neural population representation from an information geometry framework. We applied GKR to grid cell population activity, and found that running speed increases both grid cell activity toroidal-like manifold size and noise strength. Importantly, the effect of manifold dilation outpaces the effect of noise increasement, as indicated by the overall higher Fisher information at increasing speeds. This result is further supported by improved spatial information decoding accuracy at high speeds. Finally, we showed that the existence of noise covariance is information detrimental because it causes more noise projected onto the manifold surface. In total, our results indicate that grid cell spatial coding improves with increasing running speed. GKR provides a useful tool to understand neural population coding from an intuitive information geometric perspective.Competing Interest StatementThe authors have declared no competing interest.},
+	URL = {https://www.biorxiv.org/content/early/2024/09/19/2024.09.18.613797},
+	eprint = {https://www.biorxiv.org/content/early/2024/09/19/2024.09.18.613797.full.pdf},
+	journal = {bioRxiv},
+	selected={true},
+	bibtex_show={true},
+  pdf={grid_cell_info_geo.pdf},
+  preview={grid_cell_info.png}
+}
+
+@article {Ye2022.06.01.494426,
+	author = {Ye, Zeyuan and Li, Haoran and Tian, Liang and Zhou, Changsong},
+	title = {Beyond the Delay Neural Dynamics: a Decoding Strategy for Working Memory Error Reduction},
+	elocation-id = {2022.06.01.494426},
+	year = {2024},
+	doi = {10.1101/2022.06.01.494426},
+	publisher = {Cold Spring Harbor Laboratory},
+	abstract = {Understanding how the brain preserves information despite intrinsic noise is a fundamental question in working memory. Typical working memory tasks consist of delay phase for maintaining information, and decoding phase for retrieving information. While previous works have focused on the delay neural dynamics, it is poorly understood whether and how the neural process during decoding phase reduces memory error. We studied this question by training recurrent neural networks (RNNs) on a color delayed-response task. We found that the trained RNNs reduce the memory error of high-probability-occurring colors (common colors) by decoding/attributing a broader range of neural states to them during decoding phase. This decoding strategy can be further explained by a continuing converging neural dynamics following delay phase and a non-dynamic biased readout process. Our findings highlight the role of the decoding phase in working memory, suggesting that neural systems deploy multiple strategies across different phases to reduce memory errors.Significance Preserving information under noise is crucial in working memory. A typical working memory task consists of a delay phase for maintaining information, and a decoding phase for decoding the maintained into an output action. While the delay neural dynamics have been intensively studied, the impact of the decoding phase on memory error reduction remains unexplored. We trained recurrent neural networks (RNNs) on a color delayed-response task and found that RNNs reduce memory error of a color by decoding a larger portion of the neural state to that color. This strategy is supported both by a converging neural dynamic, and a non-dynamic readout process. Our results suggest that neural networks can utilize diverse strategies, beyond delay neural dynamics, to reduce memory errors.Competing Interest StatementThe authors have declared no competing interest.},
+	URL = {https://www.biorxiv.org/content/early/2024/08/02/2022.06.01.494426},
+	eprint = {https://www.biorxiv.org/content/early/2024/08/02/2022.06.01.494426.full.pdf},
+	journal = {bioRxiv},
+	selected={true},
+	bibtex_show={true},
+  pdf={post_delay_wm.pdf},
+  preview={post_delay_wm.png}
 }
