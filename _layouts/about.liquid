@@ -21,9 +21,9 @@ layout: default
       rounded' %}
           {% endif %}
           {% assign profile_image_class = 'img-fluid z-depth-1 rounded' %}
-            {% if page.profile.image_width %}
-              {% assign profile_image_class = profile_image_class | append: '" style="width: ' | append: page.profile.image_width | append: '"' %}
-            {% endif %}
+          {% if page.profile.image_width %}
+            {% assign profile_image_class = profile_image_class | append: '" style="width: ' | append: page.profile.image_width | append: '"' %}
+          {% endif %}
           {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px)
       30vw, 95vw"{% endcapture %}
           {%
