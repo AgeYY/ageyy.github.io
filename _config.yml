@@ -147,10 +147,10 @@ newsletter:
 collections:
   books:
     output: true
-  # news:
-  #   defaults:
-  #     layout: post
-  #   output: true
+  news:
+    defaults:
+      layout: post
+    output: true
   # projects:
   #   output: true
 
@@ -195,8 +195,6 @@ exclude:
   - vendor
   - _posts/
   - _pages/blog.md
-  - _news/
-  - _includes/news.liquid
   - _pages/projects.md
   - _projects/
   - _pages/dropdown.md
@@ -240,6 +238,14 @@ defaults:
       path: "assets"
     values:
       sitemap: false
+  - scope:
+      path: "_pages/about.md"
+    values:
+      announcements:
+        enabled: true
+        scrollable: true
+        scrollable_threshold: 6
+        limit: 20
 
 sass:
   style: compressed

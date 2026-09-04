@@ -39,10 +39,10 @@ layout: default
 
     <div class="clearfix">{{ content }}</div>
 
-    <!-- News -->
+    <!-- Recent updates -->
     {% if page.announcements and page.announcements.enabled %}
       <h2>
-        <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
+        <a href="{{ '/news/' | relative_url }}" style="color: inherit">Recent updates</a>
       </h2>
       {% include news.liquid limit=true %}
     {% endif %}
@@ -58,7 +58,13 @@ layout: default
     <!-- Selected papers -->
     {% if page.selected_papers %}
       <h2>
-        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">Publications</a>
+        <a
+          href="https://scholar.google.com/citations?user=qnYcPGoAAAAJ&hl=en&oi=ao"
+          style="color: inherit"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Publications</a
+        >
       </h2>
       {% include selected_papers.liquid %}
     {% endif %}

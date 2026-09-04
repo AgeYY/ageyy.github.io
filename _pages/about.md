@@ -9,11 +9,11 @@ profile:
   align: right
   image: zeyuan_wustl_small.png
   image_circular: false # crops the image to make it circular
-  image_width: 200px 
+  image_width: 200px
   more_info: >
     <p>Zeyuan Ye</p>
-    <p>PhD student @ WashU Physics</p>
-    <p>Email: y.zeyuan(at)wustl.edu</p>
+    <p>Postdoctoral Fellow @ UT Austin Neuroscience</p>
+    <p>Email: y.zeyuan(at)utexas.edu</p>
     <p>
       <a href="https://scholar.google.com/citations?user=qnYcPGoAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener noreferrer"><i class="ai ai-google-scholar"></i> Google Scholar</a>
     </p>
@@ -35,6 +35,6 @@ social: false # includes social icons at the bottom of the page
 #   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am a PhD student in the Department of Physics at WashU, working on computational neuroscience under the supervision of <a href="https://physics.wustl.edu/people/ralf-wessel" target="_blank" rel="noopener noreferrer">Prof. Ralf Wessel</a> (2021–present). Prior to joining WashU, during the pandemic, I was fortunate to spend a year working with <a href="https://physics.hkbu.edu.hk/people/zhou-chang-song" target="_blank" rel="noopener noreferrer">Prof. Changsong Zhou</a> at Hong Kong Baptist University (2020–2021), where I first became interested in neuroscience. Before that, I received my undergraduate training in physics at Sichuan University (2016–2020).
+I am a Postdoctoral Fellow in the <a href="https://neuroscience.utexas.edu/" target="_blank" rel="noopener noreferrer">Department of Neuroscience at The University of Texas at Austin</a>, working with <a href="https://neuroscience.utexas.edu/directory/xuexin-wei" target="_blank" rel="noopener noreferrer">Prof. Xue-Xin Wei</a> (2026–present). I received my Ph.D. in Physics from Washington University in St. Louis, where I studied computational neuroscience under the supervision of <a href="https://physics.wustl.edu/people/ralf-wessel" target="_blank" rel="noopener noreferrer">Prof. Ralf Wessel</a> (2021–2026). Prior to joining WashU, I worked with <a href="https://physics.hkbu.edu.hk/people/zhou-chang-song" target="_blank" rel="noopener noreferrer">Prof. Changsong Zhou</a> at Hong Kong Baptist University (2020–2021). Before that, I received my undergraduate training in physics at Sichuan University (2016–2020).
 
-My research aims to understand the computational principles of biological and artificial intelligence. I pursue this goal through two approaches: (1) *Modeling* the brain with deep neural networks; (2) *Analyzing* biological and artificial neural population representations using statistical and geometric methods.
+My research develops generative modeling and statistical methods for high-dimensional neural data, with a focus on flow matching, representational geometry, deep neural networks, and computational neuroscience.
