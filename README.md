@@ -1,3 +1,27 @@
+# Personal website
+
+## Adding a project
+
+Create a Markdown file in `_projects/`, using `_projects/fast-switch-projects.md` as an example:
+
+```yaml
+---
+layout: page
+title: Your project name
+description: One sentence explaining what it does or what you explored.
+permalink: /projects/your-project/
+importance: 2
+img: assets/img/projects/your-project.png
+github: https://github.com/AgeYY/your-project
+demo: https://your-demo-url.example
+demo_label: Try it
+---
+```
+
+Add a short explanation below the front matter. For research experiments, describe the question, what you tried, and what you found, with a central figure. Put images in `assets/img/projects/`. Omit `img`, `github`, or `demo` when they do not apply; lower `importance` values appear first. Each entry automatically gets a card on `/projects/` and its own detail page.
+
+The navigation label and page introduction live in `_pages/projects.md`. The site uses the al-folio theme documented below.
+
 # al-folio
 
 <div align="center">

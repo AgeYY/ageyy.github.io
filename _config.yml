@@ -151,8 +151,8 @@ collections:
     defaults:
       layout: post
     output: true
-  # projects:
-  #   output: true
+  projects:
+    output: true
 
 # -----------------------------------------------------------------------------
 # Jekyll settings
@@ -195,8 +195,6 @@ exclude:
   - vendor
   - _posts/
   - _pages/blog.md
-  - _pages/projects.md
-  - _projects/
   - _pages/dropdown.md
   - _pages/publications.md
   - _pages/cv.md
