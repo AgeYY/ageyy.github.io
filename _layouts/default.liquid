@@ -1,5 +1,10 @@
 <!doctype html>
-<html lang="{{ site.lang }}">
+<html
+  lang="{{ site.lang }}"
+  {% unless site.enable_darkmode %}
+    data-theme-mode="light"
+  {% endunless %}
+>
   <!-- Head -->
   <head>
     {% if page.redirect %}
