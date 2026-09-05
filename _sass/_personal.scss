@@ -1,0 +1,422 @@
+// Personal site: quiet typography, warm paper, and a single ink accent.
+:root {
+  --global-bg-color: #faf9f6;
+  --global-text-color: #262d2a;
+  --global-text-color-light: #656d67;
+  --global-theme-color: #38634f;
+  --global-hover-color: #244532;
+  --global-divider-color: #dedfd7;
+  --global-card-bg-color: #faf9f6;
+}
+
+.personal-site {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.75;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+
+  ::selection {
+    background: #dce6db;
+  }
+
+  a {
+    text-underline-offset: 4px;
+    text-decoration-thickness: 1px;
+  }
+
+  a:focus-visible {
+    outline: 2px solid var(--global-theme-color);
+    outline-offset: 5px;
+    border-radius: 2px;
+  }
+
+  .container {
+    width: calc(100% - 80px);
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  h1,
+  h2,
+  h3 {
+    color: var(--global-text-color);
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 400;
+    letter-spacing: -0.035em;
+    line-height: 1.15;
+  }
+
+  .skip-link {
+    position: absolute;
+    top: -100px;
+    left: 20px;
+    padding: 8px 16px;
+    background: var(--global-bg-color);
+    z-index: 1000;
+    &:focus {
+      top: 10px;
+    }
+  }
+
+  .site-header {
+    border-bottom: 1px solid var(--global-divider-color);
+  }
+
+  .site-nav {
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+  }
+
+  .site-name {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 24px;
+    letter-spacing: -0.04em;
+    color: var(--global-text-color);
+    white-space: nowrap;
+    text-decoration: none;
+  }
+
+  .site-nav-links {
+    display: flex;
+    gap: 30px;
+    font-size: 14px;
+    a {
+      color: var(--global-text-color-light);
+    }
+    a[aria-current="page"] {
+      color: var(--global-text-color);
+      text-decoration: underline;
+    }
+  }
+
+  .site-main {
+    flex: 1;
+    padding-top: 72px;
+    padding-bottom: 88px;
+  }
+
+  .intro {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 200px;
+    align-items: center;
+    gap: 72px;
+    padding-bottom: 64px;
+  }
+
+  .eyebrow,
+  .section-label {
+    font:
+      500 12px/1.5 -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      sans-serif;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--global-text-color-light);
+  }
+
+  .eyebrow {
+    margin-bottom: 20px;
+  }
+  .intro h1 {
+    font-size: clamp(48px, 6vw, 70px);
+    margin-bottom: 24px;
+  }
+  .intro-research {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 24px;
+  }
+  .intro-portrait {
+    display: block;
+    width: 200px;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 3px;
+  }
+
+  .contact-links,
+  .project-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 24px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .about-section {
+    display: grid;
+    grid-template-columns: 150px minmax(0, 1fr);
+    gap: 40px;
+    padding: 40px 0 56px;
+    border-top: 1px solid var(--global-divider-color);
+    .section-label {
+      padding-top: 7px;
+    }
+    p {
+      margin-bottom: 20px;
+    }
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .content-section {
+    padding-top: 32px;
+    scroll-margin-top: 30px;
+  }
+  .section-heading {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+    border-bottom: 1px solid var(--global-divider-color);
+    padding-bottom: 22px;
+    h2 {
+      margin: 0;
+      font-size: 34px;
+    }
+    > a {
+      font-size: 14px;
+      white-space: nowrap;
+    }
+  }
+
+  .publications {
+    margin: 0;
+    ol.bibliography {
+      margin: 12px 0 0;
+      > li {
+        padding: 9px 0;
+        margin: 0;
+        border: 0;
+      }
+    }
+    .publication-title {
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 1.5;
+      margin: 0 0 3px;
+    }
+    .publication-meta {
+      color: var(--global-text-color-light);
+      font-size: 13px;
+      line-height: 1.6;
+      margin: 0;
+    }
+    .publication-link {
+      white-space: nowrap;
+    }
+  }
+
+  .projects-note {
+    margin-top: 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    h2 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+    p {
+      color: var(--global-text-color-light);
+      margin: 0;
+    }
+    > a {
+      white-space: nowrap;
+      font-size: 14px;
+    }
+  }
+
+  .post-header {
+    margin-bottom: 48px;
+    .post-title {
+      font-size: clamp(40px, 5vw, 56px);
+      margin: 0 0 20px;
+    }
+    .post-description {
+      color: var(--global-text-color-light);
+      font-size: 18px;
+      max-width: 660px;
+    }
+  }
+
+  .project-entry {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 44px;
+    align-items: center;
+    padding: 32px 0;
+    border-top: 1px solid var(--global-divider-color);
+    border-bottom: 1px solid var(--global-divider-color);
+    + .project-entry {
+      border-top: 0;
+    }
+    &:not(:has(.project-image)) {
+      grid-template-columns: 1fr;
+    }
+    .project-image {
+      display: block;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 3px;
+    }
+    h2 {
+      font-size: 30px;
+      margin-bottom: 16px;
+    }
+    h2 a {
+      color: var(--global-text-color);
+    }
+    p {
+      color: var(--global-text-color-light);
+      margin-bottom: 24px;
+    }
+  }
+
+  .post > article {
+    max-width: 100%;
+  }
+  .post > article > p {
+    max-width: 760px;
+  }
+  .post > article img {
+    height: auto;
+  }
+
+  .site-footer {
+    border-top: 1px solid var(--global-divider-color);
+    background: transparent;
+    color: var(--global-text-color-light);
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    padding-top: 24px;
+    padding-bottom: 28px;
+    font-size: 12px;
+    a {
+      color: var(--global-text-color-light);
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .personal-site {
+    .container {
+      width: calc(100% - 40px);
+    }
+    .site-nav {
+      min-height: 84px;
+      gap: 18px;
+    }
+    .site-name {
+      font-size: 22px;
+    }
+    .site-nav-links {
+      gap: 16px;
+      font-size: 13px;
+    }
+    .site-main {
+      padding-top: 44px;
+      padding-bottom: 56px;
+    }
+    .intro {
+      grid-template-columns: minmax(0, 1fr) 120px;
+      gap: 24px;
+      padding-bottom: 40px;
+      align-items: start;
+    }
+    .intro-portrait {
+      width: 120px;
+      height: 150px;
+    }
+    .intro-research {
+      font-size: 16px;
+    }
+    .intro h1 {
+      font-size: 44px;
+    }
+    .eyebrow {
+      font-size: 10px;
+    }
+    .about-section {
+      grid-template-columns: 1fr;
+      gap: 16px;
+      padding: 32px 0;
+    }
+    .section-heading h2 {
+      font-size: 28px;
+    }
+    .project-entry {
+      gap: 28px;
+      grid-template-columns: 1fr;
+    }
+    .project-entry h2 {
+      font-size: 28px;
+    }
+    .projects-note {
+      align-items: start;
+      flex-direction: column;
+      gap: 16px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .personal-site {
+    .site-nav {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      gap: 10px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+    .site-name {
+      width: 100%;
+    }
+    .site-nav-links {
+      gap: 24px;
+    }
+    .intro {
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+    .intro-portrait {
+      grid-row: 1;
+      width: 100px;
+      height: 120px;
+    }
+    .intro h1 {
+      font-size: 48px;
+    }
+    .eyebrow {
+      font-size: 11px;
+      margin-bottom: 14px;
+    }
+    .section-heading {
+      flex-direction: column;
+      gap: 12px;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .personal-site *,
+  .personal-site *::before,
+  .personal-site *::after {
+    scroll-behavior: auto !important;
+    transition: none !important;
+    animation: none !important;
+  }
+}

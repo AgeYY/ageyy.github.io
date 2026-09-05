@@ -1,0 +1,37 @@
+---
+---
+<div class="publication-note" id="{{ entry.key }}">
+  <p class="publication-title">{{ entry.title }}</p>
+  <p class="publication-meta">
+    <span class="publication-authors">
+      {%- for author in entry.author_array -%}
+        {{- author.first }}
+        {{ author.last -}}
+        {%- unless forloop.last %}, {% endunless -%}
+      {%- endfor -%}
+    </span>
+    <span aria-hidden="true"> · </span>
+    <span class="publication-venue"
+      ><em>{{ entry.journal | default: entry.booktitle }}</em>
+      {%- if entry.year %}, {{ entry.year }}{% endif -%}
+    </span>
+    {% assign paper_pdf = entry.pdf %}
+    {% if paper_pdf == null and entry.eprint contains '.pdf' %}{% assign paper_pdf = entry.eprint %}{% endif %}
+    {% if paper_pdf %}
+      <span class="publication-link"
+        ><span aria-hidden="true"> · </span
+        ><a
+          href="{% if paper_pdf contains '://' %}{{ paper_pdf }}{% else %}{{ paper_pdf | prepend: '/assets/pdf/' | relative_url }}{% endif %}"
+          aria-label="PDF: {{ entry.title | escape }}"
+          >PDF</a
+        ></span
+      >
+    {% endif %}
+    {% assign paper_github = entry.github | default: entry.code %}
+    {% if paper_github contains 'github.com/' %}
+      <span class="publication-link"
+        ><span aria-hidden="true"> · </span><a href="{{ paper_github }}" aria-label="GitHub: {{ entry.title | escape }}">GitHub</a></span
+      >
+    {% endif %}
+  </p>
+</div>

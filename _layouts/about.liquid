@@ -1,85 +1,63 @@
 ---
 layout: default
 ---
-<div class="post">
-  <header class="post-header">
-    <h1 class="post-title">
-      {{ page.page_title }}
-    </h1>
-    <p class="desc">{{ page.subtitle }}</p>
-  </header>
-
-  <article>
-    {% if page.profile %}
-      <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
-        {% if page.profile.image %}
-          {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
-          {% if page.profile.image_circular %}
-            {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
-          {% else %}
-            {% assign profile_image_class = 'img-fluid z-depth-1
-      rounded' %}
-          {% endif %}
-          {% assign profile_image_class = 'img-fluid z-depth-1 rounded' %}
-          {% if page.profile.image_width %}
-            {% assign profile_image_class = profile_image_class | append: '" style="width: ' | append: page.profile.image_width | append: '"' %}
-          {% endif %}
-          {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px)
-      30vw, 95vw"{% endcapture %}
-          {%
-            include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
-            cache_bust=true
-          %}
-        {% endif %}
-        {% if page.profile.more_info %}
-          <div class="more-info">{{ page.profile.more_info }}</div>
-        {% endif %}
+<div class="home-page">
+  <section class="intro" aria-labelledby="intro-title">
+    <div class="intro-copy">
+      <p class="eyebrow">{{ page.intro_role }}</p>
+      <h1 id="intro-title">
+        {{ site.first_name }}
+        {{ site.last_name }}
+      </h1>
+      <p class="intro-research">{{ page.research_intro }}</p>
+      <div class="contact-links" aria-label="Contact and profiles">
+        <a href="mailto:zeyuanye@hotmail.com">Email <span aria-hidden="true">↗</span></a>
+        <a href="https://scholar.google.com/citations?user=qnYcPGoAAAAJ&hl=en">Google Scholar <span aria-hidden="true">↗</span></a>
+        <a href="https://github.com/AgeYY">GitHub <span aria-hidden="true">↗</span></a>
       </div>
+    </div>
+    {% if page.profile.image %}
+      <img
+        class="intro-portrait"
+        src="{{ page.profile.image | prepend: '/assets/img/' | relative_url }}"
+        alt="Portrait of Zeyuan Ye"
+        width="200"
+        height="240"
+        fetchpriority="high"
+      >
     {% endif %}
+  </section>
 
-    <div class="clearfix">{{ content }}</div>
+  <section class="about-section" aria-labelledby="about-title">
+    <h2 id="about-title" class="section-label">About</h2>
+    <div class="biography">{{ content }}</div>
+  </section>
 
-    <!-- Recent updates -->
-    {% if page.announcements and page.announcements.enabled %}
-      <h2>
-        <a href="{{ '/news/' | relative_url }}" style="color: inherit">Recent updates</a>
-      </h2>
+  {% if page.announcements and page.announcements.enabled %}
+    <section class="content-section" aria-labelledby="updates-title">
+      <div class="section-heading">
+        <h2 id="updates-title">Recent updates</h2>
+        <a href="{{ '/news/' | relative_url }}">All updates <span aria-hidden="true">↗</span></a>
+      </div>
       {% include news.liquid limit=true %}
-    {% endif %}
+    </section>
+  {% endif %}
 
-    <!-- Latest posts -->
-    {% if page.latest_posts and page.latest_posts.enabled %}
-      <h2>
-        <a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest posts</a>
-      </h2>
-      {% include latest_posts.liquid %}
-    {% endif %}
-
-    <!-- Selected papers -->
-    {% if page.selected_papers %}
-      <h2>
-        <a
-          href="https://scholar.google.com/citations?user=qnYcPGoAAAAJ&hl=en&oi=ao"
-          style="color: inherit"
-          target="_blank"
-          rel="noopener noreferrer"
-          >Publications</a
-        >
-      </h2>
-      {% include selected_papers.liquid %}
-    {% endif %}
-
-    <!-- Social -->
-    {% if page.social %}
-      <div class="social">
-        <div class="contact-icons">{% include social.liquid %}</div>
-
-        <div class="contact-note">{{ site.contact_note }}</div>
+  {% if page.selected_papers %}
+    <section class="content-section" id="publications" aria-labelledby="publications-title">
+      <div class="section-heading">
+        <h2 id="publications-title">Selected publications</h2>
+        <a href="https://scholar.google.com/citations?user=qnYcPGoAAAAJ&hl=en">All publications <span aria-hidden="true">↗</span></a>
       </div>
-    {% endif %}
+      {% include selected_papers.liquid %}
+    </section>
+  {% endif %}
 
-    {% if site.newsletter and site.newsletter.enabled and site.footer_fixed %}
-      {% include newsletter.liquid center=true %}
-    {% endif %}
-  </article>
+  <aside class="projects-note">
+    <div>
+      <h2>Outside the papers</h2>
+      <p>Small tools and research ideas I explore for fun.</p>
+    </div>
+    <a href="{{ '/projects/' | relative_url }}">Explore projects <span aria-hidden="true">→</span></a>
+  </aside>
 </div>
