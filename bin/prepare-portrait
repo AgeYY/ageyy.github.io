@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+cd "$(dirname "$0")/.."
+
+# Derive each size directly from the untouched original. Match the centered
+# 4:5 website crop, using antialiased downsampling without sharpening.
+for width in 120 200 240 360 400 600; do
+  height=$((width * 5 / 4))
+  convert assets/img/zeyuan-casual-better.png \
+    -filter Lanczos -resize "${width}x${height}^" \
+    -gravity center -extent "${width}x${height}" \
+    "assets/img/zeyuan-portrait-${width}.png"
+done

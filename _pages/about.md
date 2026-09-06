@@ -9,9 +9,23 @@ subtitle: # <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
 
 profile:
   align: right
-  image: zeyuan-casual-better.png
-  image_natural_width: 1447
-  image_natural_height: 1087
+  image: zeyuan-portrait-200.png
+  image_natural_width: 200
+  image_natural_height: 250
+  image_sizes: "(max-width: 480px) 200px, (max-width: 700px) 120px, 200px"
+  image_srcset:
+    - path: zeyuan-portrait-120.png
+      width: 120
+    - path: zeyuan-portrait-200.png
+      width: 200
+    - path: zeyuan-portrait-240.png
+      width: 240
+    - path: zeyuan-portrait-360.png
+      width: 360
+    - path: zeyuan-portrait-400.png
+      width: 400
+    - path: zeyuan-portrait-600.png
+      width: 600
   image_circular: false # crops the image to make it circular
   image_width: 200px
   more_info: >
