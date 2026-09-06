@@ -21,8 +21,8 @@ layout: default
         class="intro-portrait"
         src="{{ page.profile.image | prepend: '/assets/img/' | relative_url }}"
         alt="Portrait of Zeyuan Ye"
-        width="200"
-        height="240"
+        width="{{ page.profile.image_natural_width | default: 200 }}"
+        height="{{ page.profile.image_natural_height | default: 240 }}"
         fetchpriority="high"
       >
     {% endif %}
