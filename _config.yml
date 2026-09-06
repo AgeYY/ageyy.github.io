@@ -233,9 +233,17 @@ plugins:
   - jemoji
 
 # Sitemap settings
+# Project sites are deployed from separate repositories on the same host.
+sitemap_extra_urls:
+  - https://ageyy.github.io/ai-career-tracker-public/
+
 defaults:
   - scope:
       path: "assets"
+    values:
+      sitemap: false
+  - scope:
+      path: "google9418cf5f8954d798.html"
     values:
       sitemap: false
   - scope:
