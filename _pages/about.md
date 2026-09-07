@@ -3,7 +3,7 @@ layout: about
 title: About
 page_title: Zeyuan Ye
 intro_role: Postdoctoral Fellow · UT Austin
-research_intro: My research develops generative modeling and statistical methods for high-dimensional neural data, with a focus on flow matching, representational geometry, deep neural networks, and computational neuroscience.
+research_intro: My research develops generative modeling and statistical methods for high-dimensional data, with a focus on flow matching, representational geometry, deep neural networks, and computational neuroscience.
 permalink: /
 subtitle: # <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
 
