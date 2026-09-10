@@ -4,7 +4,7 @@ title: AI Career Tracker
 description: A searchable job board for postdoctoral and industry opportunities in AI research and engineering.
 permalink: /projects/ai-career-tracker/
 img: assets/img/projects/ai-career-tracker.png
-importance: 2
+date: 2026-09-05
 github: https://github.com/AgeYY/ai-career-tracker-public
 demo: https://ageyy.github.io/ai-career-tracker-public/
 demo_label: Visit website

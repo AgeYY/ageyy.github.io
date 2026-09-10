@@ -4,7 +4,7 @@ title: Fast Switch Projects
 description: A VS Code extension for switching between open projects with keyboard shortcuts.
 permalink: /projects/fast-switch-projects/
 img: assets/img/projects/fast-switch-projects-demo.gif
-importance: 1
+date: 2026-08-08
 github: https://github.com/AgeYY/fast-switch-projects
 ---
 
