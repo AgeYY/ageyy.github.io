@@ -25,14 +25,22 @@ ninja.data = [{
           section: "News",},{id: "news-started-as-a-postdoctoral-fellow-in-the-department-of-neuroscience-at-the-university-of-texas-at-austin-working-with-prof-xue-xin-wei",
           title: 'Started as a Postdoctoral Fellow in the Department of Neuroscience at The University...',
           description: "",
-          section: "News",},{id: "projects-ai-career-tracker",
-          title: 'AI Career Tracker',
-          description: "A searchable job board for postdoctoral and industry opportunities in AI research and engineering.",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/ai-career-tracker/";
-            },},{id: "projects-fast-switch-projects",
+          section: "News",},{id: "news-released-clipboard-upload-v0-3-0-a-windows-tool-that-uploads-clipboard-screenshots-and-files-to-an-ssh-server-with-ctrl-alt-u-and-copies-their-remote-paths-back-to-the-clipboard-download-the-release",
+          title: 'Released Clipboard Upload v0.3.0, a Windows tool that uploads clipboard screenshots and files...',
+          description: "",
+          section: "News",},{id: "projects-fast-switch-projects",
           title: 'Fast Switch Projects',
           description: "A VS Code extension for switching between open projects with keyboard shortcuts.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/fast-switch-projects/";
+            },},{id: "projects-ai-career-tracker",
+          title: 'AI Career Tracker',
+          description: "A searchable job board for postdoctoral and industry opportunities in AI research and engineering.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ai-career-tracker/";
+            },},{id: "projects-clipboard-upload",
+          title: 'Clipboard Upload',
+          description: "Copy a screenshot or files, press a hotkey, and paste their remote paths into a Codex chat.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/clipboard-upload/";
             },},];
