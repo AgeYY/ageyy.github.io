@@ -236,6 +236,7 @@ plugins:
 # Project sites are deployed from separate repositories on the same host.
 sitemap_extra_urls:
   - https://ageyy.github.io/ai-career-tracker-public/
+  - https://ageyy.github.io/paper-trending/
 
 defaults:
   - scope:
