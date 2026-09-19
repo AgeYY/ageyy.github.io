@@ -43,4 +43,9 @@ ninja.data = [{
           description: "Copy a screenshot or files, press a hotkey, and paste their remote paths into a Codex chat.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/clipboard-upload/";
+            },},{id: "projects-paper-trending",
+          title: 'Paper Trending',
+          description: "Explore research topics across ICLR, ICML, and NeurIPS with paper-count trends and transparent ICLR acceptance comparisons.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/paper-trending/";
             },},];
